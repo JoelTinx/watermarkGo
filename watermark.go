@@ -12,9 +12,13 @@ import (
 	"runtime"
 )
 
+func init() {
+  //os.Mkdir("." + string(filepath.Separator) + "output",0777)
+  os.Mkdir("output",0777) // Output files proccess
+}
+
 func whenError(err error) {
 	if err != nil {
-		fmt.Println(err)
 		panic(err)
 		return
 	}
